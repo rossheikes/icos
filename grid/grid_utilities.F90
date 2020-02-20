@@ -8,13 +8,36 @@
    PRIVATE 
 
    PUBLIC :: &
-      mid_point,tangent_to_sphere,voronoi_corner,cross_product, &
+      zerozero,mid_point,tangent_to_sphere,voronoi_corner,cross_product, &
       unit_vector,xyz_to_lonlat,lonlat_to_xyz,spherical_triangle_area, &
       area_corner_kites,arch_distance,l_polygon_bounding,linear_weights, &
       linear_distance,l_zero_vector,set_vctr_wghts_crn,local_east,local_north, &
       prjct
 
    CONTAINS
+!=======================================================================
+!  BEGIN FUNCTION zerozero
+!=======================================================================
+   FUNCTION zerozero (p1) RESULT (p_out)
+!.......................................................................
+!  INTENT IN
+!.......................................................................
+   REAL (KIND=dbl_kind) :: &
+      p1(3)
+!.......................................................................
+!  INTENT OUT
+!.......................................................................
+   REAL (KIND=dbl_kind) :: & 
+      p_out(3)
+!.:. .:. .:. .:. .:. .:. .:. .:. .:. .:. .:. .:. .:. .:. .:. .:. .:. .:.
+
+   p_out(:) = zero
+
+   END FUNCTION zerozero
+!=======================================================================
+!  END FUNCTION zerozero
+!=======================================================================
+
 !=======================================================================
 !  BEGIN FUNCTION mid_point
 !=======================================================================
