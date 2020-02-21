@@ -9,7 +9,7 @@
    SAVE
 
    INTEGER (KIND=int_kind),PARAMETER :: &
-      npe_wrld = 00000001 ! number of process elements within the
+      npe_wrld = 00000020 ! number of process elements within the
                           ! world communicator
 
    INTEGER (KIND=int_kind) :: &
